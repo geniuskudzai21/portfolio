@@ -80,6 +80,16 @@
                     transform: translateY(0);
                 }
             }
+            @keyframes scaleIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.9);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
         }
         
         /* Grid Background Animation */
@@ -176,7 +186,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="px-1 relative overflow-hidden">
+        <section id="about" class="px-8 py-2 relative overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <div class="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-center">
                     <div class="relative flex justify-center">
@@ -184,7 +194,7 @@
                         <div class="glassmorphism rounded-3xl overflow-hidden aspect-[3/4] max-w-[280px] border-ai-cyan/10">
                             <!-- Image path from original: assets/img1.jpg -->
                             <img src="assets/img1.jpg" alt="Genius Chakanya"
-                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                                class="w-full h-full object-cover transition-all duration-700">
                         </div>
                     </div>
                     <div class="space-y-6">
@@ -220,11 +230,11 @@
         </section>
 
         <!-- Technical Matrix (Skills) -->
-        <section id="skills" class="px-6 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto space-y-2">
+        <section id="skills" class="px-6 py-12 pb-5 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto space-y-1">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Capabilities</h2>
-                    <h3 class="text-4xl md:text-5xl font-heading mb-4 font-bold text-white">The Technical Matrix</h3>
+                    <h3 class="text-4xl md:text-5xl font-heading pb-8 font-bold text-white">The Technical Matrix</h3>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
@@ -305,7 +315,7 @@
                         class="glassmorphism p-8 rounded-3xl border-white/5 space-y-6 group hover:border-ai-indigo/30 transition-all">
                         <div class="flex items-center space-x-4">
                             <i data-lucide="network" class="text-ai-indigo"></i>
-                            <h4 class="text-xl font-bold text-white">Infrastructure</h4>
+                            <h4 class="text-sm font-bold text-white">Infrastructure</h4>
                         </div>
                         <ul class="space-y-4">
                             <li class="flex justify-between items-center group/item">
@@ -319,15 +329,18 @@
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
-                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Hardware diagnostics 
-                                    & system testing</span>
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Basic Hardware diagnostics 
+                                    </span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
-                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Enterprise
-                                    Support</span>
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">DB startup & monitoring</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
                             </li>
+                            <li class="flex justify-between items-center group/item">
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Basic Router/Switch configs</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
+                                </li>
                         </ul>
                     </div>
                 </div>
@@ -339,7 +352,7 @@
             <div class="max-w-4xl mx-auto space-y-16">
                 <div class="text-center">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-violet uppercase mb-4">Mission History</h2>
-                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Practical Engineering</h3>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Practical Internship</h3>
                 </div>
 
                 <div class="relative pl-8 border-l border-ai-indigo/30 space-y-12">
@@ -351,22 +364,36 @@
                         <div class="space-y-4">
                             <div class="flex flex-wrap justify-between items-start gap-2">
                                 <div>
-                                    <h4 class="text-2xl font-bold text-white">IT Support / Engineering Intern</h4>
+                                    <h4 class="text-2xl font-bold text-white">IT Support Intern</h4>
                                     <p class="text-ai-cyan font-bold">Mutare City Council</p>
                                 </div>
                                 <span
-                                    class="px-3 py-1 glassmorphism rounded-full text-xs text-slate-400 border-white/5">Jan
-                                    2024 — Dec 2024</span>
+                                    class="px-3 py-1 glassmorphism rounded-full text-xs text-slate-400 border-white/5">
+                                    July 2025 — July 2026</span>
                             </div>
                             <ul class="space-y-3 text-slate-400 list-disc list-inside marker:text-ai-indigo">
-                                <li>Spearheaded system troubleshooting for municipal infrastructures, ensuring 99.9%
-                                    uptime for critical services.</li>
-                                <li>Optimized local area networks (LAN) and implemented secure protocols across multiple
-                                    departments.</li>
-                                <li>Developed internal utility scripts to automate repetitive system maintenance tasks.
+                                <li>
+                                    Provided Tier 1 technical support to internal and remote staff
                                 </li>
-                                <li>Bridged the gap between non-technical staff and complex digital systems through
-                                    effective training and support.</li>
+                                
+                                <li>
+                                   Ensured database server availability for internal operations
+                                </li>
+                                <li>
+                                    Configured network settings (DNS, Gateway, Subnet) for local devices
+                                </li>
+                                <li>
+                                    Assisted in network device configuration (routers/switches)
+                                </li>
+                                <li>
+                                    Performed basic backup and recovery procedures
+                                </li>
+                                <li>
+                                    Installed and configured enterprise software environments
+                                </li>
+                                <li>
+                                    Performed network diagnostics and connectivity troubleshooting
+                                </li>
                             </ul>
                             <div class="flex flex-wrap gap-2 pt-2">
                                 <span
@@ -376,6 +403,8 @@
                                     Admin</span>
                                 <span
                                     class="text-[10px] font-bold px-2 py-1 glassmorphism rounded-md text-slate-500 uppercase">Troubleshooting</span>
+                                    <span
+                                    class="text-[10px] font-bold px-2 py-1 glassmorphism rounded-md text-slate-500 uppercase">DB Administration</span>
                             </div>
                         </div>
                     </div>
@@ -389,7 +418,6 @@
                 <div class="flex flex-col md:flex-row justify-between items-end gap-8">
                     <div class="max-w-2xl space-y-4">
                         <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Featured Works</h2>
-                        <h3 class="text-4xl md:text-6xl font-heading font-bold text-white">Selected Deployments</h3>
                     </div>
                     <a href="https://github.com/geniuskudzai21" target="_blank"
                         class="flex items-center space-x-2 text-ai-cyan hover:translate-x-2 transition-transform font-bold">
@@ -411,7 +439,7 @@
                         <div class="p-8 space-y-6">
                             <div class="space-y-2">
                                 <h4 class="text-xl font-bold text-white group-hover:text-ai-cyan transition-colors">
-                                    Neural Performance Analytics</h4>
+                                    Genius Performance Analytics</h4>
                                 <p class="text-slate-400 text-sm line-clamp-2">Interactive system for visualizing
                                     student academic growth, setting goals and tracking performance with sub-second
                                     latency.</p>
@@ -427,6 +455,11 @@
                                     class="flex items-center space-x-1 text-xs font-bold text-slate-300 hover:text-ai-cyan transition-colors">
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                     <span>Deploy</span>
+                                </a>
+                                <a href="https://youtu.be/fidZTq8gnQw"
+                                    class="flex items-center space-x-1 text-xs font-bold text-slate-300 hover:text-ai-violet transition-colors">
+                                    <i data-lucide="play" class="w-4 h-4"></i>
+                                    <span>Demo</span>
                                 </a>
                                 <a href="https://github.com/geniuskudzai21/GeniusPA.git"
                                     class="flex items-center space-x-1 text-xs font-bold text-slate-300 hover:text-ai-cyan transition-colors">
@@ -514,17 +547,30 @@
             </div>
         </section>
 
+        <!-- Certificates Modal -->
+        <div id="cert-modal" class="fixed inset-0 z-50 hidden">
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeCertModal()"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl p-4">
+                <div class="glassmorphism rounded-2xl overflow-hidden border border-ai-cyan/30 animate-[scaleIn_0.3s_ease_forwards]">
+                    <button onclick="closeCertModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-ai-cyan hover:text-black transition-all">
+                        <i data-lucide="x"></i>
+                    </button>
+                    <img id="cert-modal-img" src="" alt="Certificate" class="w-full h-auto max-h-[80vh] object-contain">
+                </div>
+            </div>
+        </div>
+
         <!-- Certificates -->
-        <section id="certificates" class="px-6 bg-slate-900/40 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto space-y-16">
+        <section id="certificates" class="px-6 py-12 bg-slate-900/40 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto space-y-12">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Verified Expertise</h2>
                     <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Credentials Matrix</h3>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Cert 1 -->
-                    <div
-                        class="glassmorphism p-8 rounded-3xl border-white/5 space-y-6 hover:border-ai-cyan/20 transition-all">
+                    <div onclick="openCertModal('assets/machine learning.png')"
+                        class="cursor-pointer glassmorphism p-8 rounded-3xl border-white/5 hover:border-ai-cyan/40 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]">
                         <div class="w-12 h-12 bg-ai-cyan/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="award" class="text-ai-cyan"></i>
                         </div>
@@ -536,8 +582,8 @@
                         </div>
                     </div>
                     <!-- Cert 2 -->
-                    <div
-                        class="glassmorphism p-8 rounded-3xl border-white/5 space-y-6 hover:border-ai-violet/20 transition-all">
+                    <div onclick="openCertModal('assets/genAI.jpg')"
+                        class="cursor-pointer glassmorphism p-8 rounded-3xl border-white/5 hover:border-ai-violet/40 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)]">
                         <div class="w-12 h-12 bg-ai-violet/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="brain-circuit" class="text-ai-violet"></i>
                         </div>
@@ -549,8 +595,8 @@
                         </div>
                     </div>
                     <!-- Cert 3 -->
-                    <div
-                        class="glassmorphism p-8 rounded-3xl border-white/5 space-y-6 hover:border-ai-indigo/20 transition-all">
+                    <div onclick="openCertModal('assets/version control.JPG')"
+                        class="cursor-pointer glassmorphism p-8 rounded-3xl border-white/5 hover:border-ai-indigo/40 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(79,70,229,0.2)]">
                         <div class="w-12 h-12 bg-ai-indigo/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="git-branch" class="text-ai-indigo"></i>
                         </div>
@@ -566,11 +612,11 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="px-6 relative overflow-hidden">
+        <section id="contact" class="px-6 py-12 relative overflow-hidden">
             <div class="max-w-7xl mx-auto">
-                <div class="glassmorphism rounded-[3rem] p-8 md:p-16 border-ai-cyan/10 overflow-hidden relative">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-ai-cyan/10 blur-[100px] -z-10"></div>
-                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-ai-violet/10 blur-[100px] -z-10"></div>
+                <div class="glassmorphism rounded-[3rem] p-6 md:p-12 border-ai-cyan/10 overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-48 h-48 bg-transparent blur-0 -z-10"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-transparent blur-0 -z-10"></div>
 
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
                         <div class="space-y-8">
@@ -808,6 +854,25 @@
             move();
         });
         lucide.createIcons(); // Re-init for injected icons
+
+        // Certificate Modal Functions
+        function openCertModal(imgSrc) {
+            const modal = document.getElementById('cert-modal');
+            const modalImg = document.getElementById('cert-modal-img');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal() {
+            const modal = document.getElementById('cert-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeCertModal();
+        });
     </script>
 </body>
 
