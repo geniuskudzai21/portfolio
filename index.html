@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genius Chakanya (Genius Kudzai) | Full-Stack Developer | Zimbabwe Mutare</title>
+    <title>Genius Chakanya | Full-Stack Developer | Zimbabwe Mutare</title>
     <meta name="description" content="Portfolio of Genius Chakanya (Genius Kudzai), a Full-Stack Developer based in Mutare, Zimbabwe. Specializing in AI solutions, modern web architecture, React, Node.js, Python, and production-grade engineering.">
     <meta name="keywords" content="Genius Chakanya, Genius Kudzai, Full-Stack Developer, Web Developer, Mutare Zimbabwe, AI Developer, React Developer, Python Developer, Portfolio">
     <meta name="author" content="Genius Chakanya">
@@ -13,7 +13,7 @@
     <meta property="og:description" content="Portfolio of Genius Chakanya (Genius Kudzai), Full-Stack Developer based in Mutare, Zimbabwe. Specializing in AI solutions and modern web architecture.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#020617">
-    <link rel="canonical" href="https://geniuschakanya.tech">
+    <link rel="canonical" href="https://geniuschakanya.co.zw">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
@@ -54,10 +54,10 @@
     <style type="text/tailwindcss">
         @layer base {
             html {
-                @apply scroll-smooth snap-y snap-mandatory;
+                scroll-behavior: smooth;
             }
             section {
-                @apply snap-start min-h-screen flex flex-col justify-center scroll-mt-24 md:scroll-mt-32;
+                scroll-margin-top: 100px;
             }
         }
         @layer utilities {
@@ -153,8 +153,8 @@
     <main class="relative">
 
         <!-- Hero Section -->
-        <section id="hero" class="relative overflow-hidden flex items-center">
-            <div class="text-center space-y-6 max-w-4xl animate-fade-in-up pt-[50px]">
+        <section id="hero" class="relative overflow-hidden flex items-center justify-center min-h-screen pt-20 pb-12">
+            <div class="text-center space-y-6 max-w-4xl mx-auto animate-fade-in-up">
                 <div
                     class="inline-flex items-center space-x-2 px-3 py-1 rounded-full glassmorphism text-xs font-bold tracking-widest text-ai-cyan uppercase border-ai-cyan/30 mb-4">
                     <span class="relative flex h-2 w-2">
@@ -193,7 +193,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="px-8 py-2 relative overflow-hidden">
+        <section id="about" class="px-8 py-16 md:py-24 relative overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <div class="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-center">
                     <div class="relative flex justify-center hidden md:block">
@@ -237,7 +237,7 @@
         </section>
 
         <!-- Tech Stack (Skills) -->
-        <section id="skills" class="px-6 py-12 pb-5 relative overflow-hidden">
+        <section id="skills" class="px-6 py-16 md:py-24 relative overflow-hidden">
             <div class="max-w-7xl mx-auto space-y-1">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Capabilities</h2>
@@ -355,7 +355,7 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="px-6 bg-slate-900/40 relative overflow-hidden">
+        <section id="experience" class="px-6 py-16 md:py-24 bg-slate-900/40 relative overflow-hidden">
             <div class="max-w-4xl mx-auto space-y-16">
                 <div class="text-center">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-violet uppercase mb-4">Mission History</h2>
@@ -420,7 +420,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="px-6 relative overflow-hidden">
+        <section id="projects" class="px-6 py-16 md:py-24 relative overflow-hidden">
             <div class="max-w-7xl mx-auto space-y-16">
                 <div class="flex flex-col md:flex-row justify-between items-end gap-8">
                     <div class="max-w-2xl space-y-4">
@@ -568,7 +568,7 @@
         </div>
 
         <!-- Certificates -->
-        <section id="certificates" class="px-6 py-12 bg-slate-900/40 relative overflow-hidden">
+        <section id="certificates" class="px-6 py-16 md:py-24 bg-slate-900/40 relative overflow-hidden">
             <div class="max-w-7xl mx-auto space-y-12">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Verified Expertise</h2>
@@ -619,7 +619,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="px-6 py-12 relative overflow-hidden">
+        <section id="contact" class="px-6 py-16 md:py-24 relative overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <div class="glassmorphism rounded-[3rem] p-6 md:p-12 border-ai-cyan/10 overflow-hidden relative">
                     <div class="absolute top-0 right-0 w-48 h-48 bg-transparent blur-0 -z-10"></div>
@@ -632,8 +632,6 @@
                                     Initiate Talk</h2>
                                 <h3 class="text-3xl md:text-6xl font-heading font-bold text-white leading-tight">Ready
                                     for a <span class="neon-text-cyan">Digital Leap?</span></h3>
-                                <p class="text-slate-400 text-lg">Whether it's a legacy system overhaul or a futuristic
-                                    AI build, I'm ready to execute.</p>
                             </div>
                             <div class="space-y-4">
                                 <a href="mailto:geniusboykanya@gmail.com"
@@ -648,7 +646,7 @@
                                         <p class="text-white font-medium">geniusboykanya@gmail.com</p>
                                     </div>
                                 </a>
-                                <div class="flex items-center space-x-4 p-4 glassmorphism rounded-2xl border-white/5">
+                                <div class="flex items-center space-x-4 p-4 glassmorphism rounded-xl border-white/5">
                                     <div class="w-12 h-12 bg-ai-violet/10 rounded-xl flex items-center justify-center">
                                         <i data-lucide="phone" class="text-ai-violet"></i>
                                     </div>
@@ -682,7 +680,7 @@
                                 <div class="space-y-2">
                                     <label
                                         class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 ml-1">Channel</label>
-                                    <input type="email" name="email" placeholder="email@address.ai" required
+                                    <input type="email" name="email" placeholder="exmple@gmail.com" required
                                         class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-ai-cyan/50 transition-all">
                                 </div>
                                 <div class="space-y-2">
@@ -705,7 +703,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-white/5 bg-slate-900/80 snap-start">
+    <footer class="p-10 mb-2 px-6 border-t border-white/5 bg-slate-900/80">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="space-y-2 text-center md:text-left">
                 <p class="text-white font-heading font-bold tracking-tight">GENIUS<span class="text-ai-cyan">.CHAKANYA</span>
