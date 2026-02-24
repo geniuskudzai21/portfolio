@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genius Chakanya | Full-Stack AI Engineer</title>
+    <title>Genius Chakanya | Full-Stack Developer</title>
     <meta name="description"
         content="Portfolio of Genius Chakanya, a Full-Stack Developer specializing in AI-inspired solutions, modern web architecture, and production-grade engineering.">
     <!-- Google Fonts -->
@@ -169,56 +169,47 @@
                 </div>
             </div>
 
-            <!-- Persistent Tech Stack (Floating/Moving) -->
-            <div id="tech-float-container" class="fixed inset-0 pointer-events-none z-10 overflow-hidden">
+            <!-- Persistent Tech Stack (Floating/Moving) - Only in hero free space -->
+            <div id="tech-float-container" class="absolute bottom-0 left-0 w-full h-1/3 pointer-events-none z-10 overflow-hidden">
                 <!-- Dynamically populated by JS -->
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="px-6 relative overflow-hidden">
+        <section id="about" class="px-1 relative overflow-hidden">
             <div class="max-w-7xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-ai-cyan/5 rounded-3xl blur-3xl -z-10">
-                        </div>
-                        <div class="glassmorphism rounded-3xl overflow-hidden aspect-square border-ai-cyan/10">
+                <div class="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-center">
+                    <div class="relative flex justify-center">
+                        <div class="absolute inset-0 bg-ai-cyan/5 rounded-3xl blur-3xl -z-10"></div>
+                        <div class="glassmorphism rounded-3xl overflow-hidden aspect-[3/4] max-w-[280px] border-ai-cyan/10">
                             <!-- Image path from original: assets/img1.jpg -->
                             <img src="assets/img1.jpg" alt="Genius Chakanya"
-                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 hover:scale-100">
-                        </div>
-                        <div
-                            class="absolute -bottom-8 -right-8 glassmorphism p-6 rounded-2xl border-ai-violet/20 hidden lg:block">
-                            <p class="text-3xl font-bold font-heading text-white">4+</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Years of Passion</p>
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                         </div>
                     </div>
-                    <div class="space-y-8">
+                    <div class="space-y-6">
                         <div>
-                            <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase mb-4">Core Identity
-                            </h2>
-                            <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Engineering Solutions,
+                            <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase mb-3">Core Identity</h2>
+                            <h3 class="text-3xl md:text-4xl font-heading font-bold text-white">Engineering Solutions,
                                 Not Just Interfaces.</h3>
                         </div>
-                        <p class="text-slate-400 text-lg leading-relaxed">
+                        <p class="text-slate-400 leading-relaxed">
                             I am a Full-Stack Developer with a relentless drive for solving complex technical
                             challenges. Currently pursuing my degree at the National University of Science and
                             Technology, I bridge the gap between human needs and machine intelligence.
                         </p>
-                        <p class="text-slate-400 text-lg leading-relaxed">
+                        <p class="text-slate-400 leading-relaxed">
                             My focus lies in building architectures that are not only visually stunning but also
                             performant, accessible, and ready for the AI-driven world of 2026 and beyond.
                         </p>
-                        <div class="grid grid-cols-2 gap-6 pt-4">
-                            <div
-                                class="p-4 glassmorphism rounded-xl border-white/5 hover:border-ai-cyan/20 transition-all">
-                                <i data-lucide="target" class="text-ai-cyan mb-2"></i>
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 glassmorphism rounded-xl border-white/5">
+                                <i data-lucide="target" class="text-ai-cyan mb-2 w-5 h-5"></i>
                                 <h4 class="text-white font-bold mb-1">Impact-Driven</h4>
                                 <p class="text-xs text-slate-500">Products that matter.</p>
                             </div>
-                            <div
-                                class="p-4 glassmorphism rounded-xl border-white/5 hover:border-ai-violet/20 transition-all">
-                                <i data-lucide="zap" class="text-ai-violet mb-2"></i>
+                            <div class="p-4 glassmorphism rounded-xl border-white/5">
+                                <i data-lucide="zap" class="text-ai-violet mb-2 w-5 h-5"></i>
                                 <h4 class="text-white font-bold mb-1">Ultra-Fast</h4>
                                 <p class="text-xs text-slate-500">Optimized to core.</p>
                             </div>
@@ -230,10 +221,10 @@
 
         <!-- Technical Matrix (Skills) -->
         <section id="skills" class="px-6 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto space-y-16">
+            <div class="max-w-7xl mx-auto space-y-2">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Capabilities</h2>
-                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">The Technical Matrix</h3>
+                    <h3 class="text-4xl md:text-5xl font-heading mb-4 font-bold text-white">The Technical Matrix</h3>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
@@ -256,13 +247,18 @@
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-cyan shadow-[0_0_8px_#22d3ee]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
-                                <span class="text-slate-400 group-hover/item:text-white transition-colors">React.js
-                                    Ecosystem</span>
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">React.js /
+                                Shadcn ui</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-cyan shadow-[0_0_8px_#22d3ee]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
                                 <span class="text-slate-400 group-hover/item:text-white transition-colors">Node.js /
                                     Express</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-ai-cyan shadow-[0_0_8px_#22d3ee]"></span>
+                            </li>
+                            <li class="flex justify-between items-center group/item">
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">PostegreSQL /
+                                    MongoDB</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-cyan shadow-[0_0_8px_#22d3ee]"></span>
                             </li>
                         </ul>
@@ -281,6 +277,11 @@
                                     Models)</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-violet shadow-[0_0_8px_#8b5cf6]"></span>
                             </li>
+                              <li class="flex justify-between items-center group/item">
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Version
+                                    Control</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
+                            </li>
                             <li class="flex justify-between items-center group/item">
                                 <span class="text-slate-400 group-hover/item:text-white transition-colors">C# / .NET
                                     Architecture</span>
@@ -292,8 +293,8 @@
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-violet shadow-[0_0_8px_#8b5cf6]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
-                                <span class="text-slate-400 group-hover/item:text-white transition-colors">System
-                                    Analysis</span>
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">System 
+                                    Design</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-violet shadow-[0_0_8px_#8b5cf6]"></span>
                             </li>
                         </ul>
@@ -318,8 +319,8 @@
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
-                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Git / CI/CD
-                                    Pipelines</span>
+                                <span class="text-slate-400 group-hover/item:text-white transition-colors">Hardware diagnostics 
+                                    & system testing</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-ai-indigo shadow-[0_0_8px_#4f46e5]"></span>
                             </li>
                             <li class="flex justify-between items-center group/item">
@@ -770,30 +771,37 @@
 
         techStack.forEach((tech, index) => {
             const el = document.createElement('div');
-            el.className = 'absolute flex flex-col items-center text-ai-cyan/20 transition-opacity duration-1000';
+            el.className = 'absolute flex flex-col items-center text-ai-cyan/50 transition-opacity duration-1000';
             el.innerHTML = `
-                <i data-lucide="${tech.icon}" class="w-6 h-6 md:w-8 md:h-8"></i>
-                <span class="text-[8px] uppercase font-bold mt-1 tracking-widest">${tech.label}</span>
+                <i data-lucide="${tech.icon}" class="w-8 h-8 md:w-10 md:h-10"></i>
+                <span class="text-[10px] uppercase font-bold mt-1 tracking-widest">${tech.label}</span>
             `;
             floatContainer.appendChild(el);
 
-            // Initial random position
-            let x = Math.random() * 80 + 10;
-            let y = Math.random() * 80 + 10;
+            // Initial random position - spread across the bottom area
+            let x = Math.random() * 90 + 5;
+            let y = Math.random() * 70 + 10;
             let angle = Math.random() * Math.PI * 2;
-            let speed = 0.01 + Math.random() * 0.02;
+            let speed = 0.008 + Math.random() * 0.015;
 
             function move() {
                 angle += speed;
-                const finalX = x + Math.cos(angle) * 5;
-                const finalY = y + Math.sin(angle) * 5;
+                const finalX = x + Math.cos(angle) * 8;
+                const finalY = y + Math.sin(angle) * 8;
 
-                el.style.left = `${finalX}%`;
-                el.style.top = `${finalY}%`;
+                // Keep within bounds
+                if (finalX < 0 || finalX > 95) {
+                    x = Math.random() * 90 + 5;
+                }
+                if (finalY < 0 || finalY > 90) {
+                    y = Math.random() * 70 + 10;
+                }
 
-                // Adjust opacity based on scroll pos to keep it subtle but present
-                const scrollProgress = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-                el.style.opacity = 0.1 + (Math.sin(angle) * 0.1);
+                el.style.left = `${Math.max(2, Math.min(93, x + Math.cos(angle) * 8))}%`;
+                el.style.top = `${Math.max(5, Math.min(85, y + Math.sin(angle) * 8))}%`;
+
+                // Subtle opacity
+                el.style.opacity = 0.25 + (Math.sin(angle) * 0.1);
 
                 requestAnimationFrame(move);
             }
