@@ -14,11 +14,9 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#020617">
     <link rel="canonical" href="https://geniuschakanya.co.zw">
-    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -55,9 +53,14 @@
         @layer base {
             html {
                 scroll-behavior: smooth;
+                overflow-x: hidden;
+            }
+            body {
+                overflow-x: hidden;
             }
             section {
                 scroll-margin-top: 100px;
+                padding-left: max(15px, env(safe-area-inset-left, 15px));
             }
         }
         @layer utilities {
@@ -115,6 +118,62 @@
             border-radius: 50%;
             pointer-events: none;
         }
+
+        /* Section Navigation Buttons */
+        .section-nav-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(2, 6, 23, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-nav-btn:hover {
+            background: rgba(34, 211, 238, 0.1);
+            border-color: rgba(34, 211, 238, 0.3);
+            color: #22d3ee;
+            transform: scale(1.1);
+        }
+
+        .section-nav-btn.active {
+            background: rgba(34, 211, 238, 0.15);
+            border-color: #22d3ee;
+            color: #22d3ee;
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 12px;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .mobile-nav-btn:hover,
+        .mobile-nav-btn.active {
+            color: #22d3ee;
+            background: rgba(34, 211, 238, 0.1);
+        }
+
+        .mobile-nav-btn.active {
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+        }
+
+        /* Add padding to bottom for mobile nav */
+        main {
+            padding-bottom: 80px;
+        }
     </style>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -131,8 +190,8 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center glassmorphism mt-4 rounded-2xl mx-4">
+<nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 pl-[15px]" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center glassmorphism mt-4 rounded-2xl mx-4" style="padding-left: max(15px, env(safe-area-inset-left, 15px));">
             <a href="#" class="text-2xl font-heading font-black tracking-tighter text-white uppercase italic">
                 GENIUS<span class="text-ai-cyan tracking-normal">.CHAKANYA</span>
             </a>
@@ -152,8 +211,59 @@
     <!-- Main Content -->
     <main class="relative">
 
+        <!-- Mobile Bottom Navigation -->
+        <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-lg border-t border-white/10 px-4 py-3">
+            <div class="flex justify-around items-center">
+                <a href="#hero" class="mobile-nav-btn" data-section="hero">
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    <span class="text-[10px] mt-1">Home</span>
+                </a>
+                <a href="#about" class="mobile-nav-btn" data-section="about">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                    <span class="text-[10px] mt-1">About</span>
+                </a>
+                <a href="#skills" class="mobile-nav-btn" data-section="skills">
+                    <i data-lucide="code-2" class="w-5 h-5"></i>
+                    <span class="text-[10px] mt-1">Skills</span>
+                </a>
+                <a href="#projects" class="mobile-nav-btn" data-section="projects">
+                    <i data-lucide="folder" class="w-5 h-5"></i>
+                    <span class="text-[10px] mt-1">Work</span>
+                </a>
+                <a href="#contact" class="mobile-nav-btn" data-section="contact">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <span class="text-[10px] mt-1">Contact</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section Navigation Buttons (Desktop) -->
+        <div class="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3">
+            <a href="#hero" class="section-nav-btn" data-section="hero">
+                <i data-lucide="home" class="w-4 h-4"></i>
+            </a>
+            <a href="#about" class="section-nav-btn" data-section="about">
+                <i data-lucide="user" class="w-4 h-4"></i>
+            </a>
+            <a href="#skills" class="section-nav-btn" data-section="skills">
+                <i data-lucide="code-2" class="w-4 h-4"></i>
+            </a>
+            <a href="#experience" class="section-nav-btn" data-section="experience">
+                <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </a>
+            <a href="#projects" class="section-nav-btn" data-section="projects">
+                <i data-lucide="folder" class="w-4 h-4"></i>
+            </a>
+            <a href="#certificates" class="section-nav-btn" data-section="certificates">
+                <i data-lucide="award" class="w-4 h-4"></i>
+            </a>
+            <a href="#contact" class="section-nav-btn" data-section="contact">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+        </div>
+
         <!-- Hero Section -->
-        <section id="hero" class="relative overflow-hidden flex items-center justify-center min-h-screen pt-20 pb-12">
+        <section id="hero" class="relative overflow-hidden flex items-center justify-center min-h-screen pt-20 pb-12 pl-[15px]">
             <div class="text-center space-y-6 max-w-4xl mx-auto animate-fade-in-up">
                 <div
                     class="inline-flex items-center space-x-2 px-3 py-1 rounded-full glassmorphism text-xs font-bold tracking-widest text-ai-cyan uppercase border-ai-cyan/30 mb-4">
@@ -193,7 +303,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="px-8 py-16 md:py-24 relative overflow-hidden">
+        <section id="about" class="px-8 py-16 md:py-24 mb-8 relative overflow-hidden pl-[15px]">
             <div class="max-w-7xl mx-auto">
                 <div class="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-center">
                     <div class="relative flex justify-center hidden md:block">
@@ -237,7 +347,7 @@
         </section>
 
         <!-- Tech Stack (Skills) -->
-        <section id="skills" class="px-6 py-16 md:py-24 relative overflow-hidden">
+        <section id="skills" class="px-6 py-16 md:py-24 mb-8 relative overflow-hidden pl-[15px]">
             <div class="max-w-7xl mx-auto space-y-1">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Capabilities</h2>
@@ -355,7 +465,7 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="px-6 py-16 md:py-24 bg-slate-900/40 relative overflow-hidden">
+        <section id="experience" class="px-6 py-16 md:py-24 mb-8 bg-slate-900/40 relative overflow-hidden pl-[15px]">
             <div class="max-w-4xl mx-auto space-y-16">
                 <div class="text-center">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-violet uppercase mb-4">Mission History</h2>
@@ -420,7 +530,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="px-6 py-16 md:py-24 relative overflow-hidden">
+        <section id="projects" class="px-6 py-16 md:py-24 mb-8 relative overflow-hidden pl-[15px]">
             <div class="max-w-7xl mx-auto space-y-16">
                 <div class="flex flex-col md:flex-row justify-between items-end gap-8">
                     <div class="max-w-2xl space-y-4">
@@ -568,7 +678,7 @@
         </div>
 
         <!-- Certificates -->
-        <section id="certificates" class="px-6 py-16 md:py-24 bg-slate-900/40 relative overflow-hidden">
+        <section id="certificates" class="px-6 py-16 md:py-24 mb-8 bg-slate-900/40 relative overflow-hidden pl-[15px]">
             <div class="max-w-7xl mx-auto space-y-12">
                 <div class="text-center space-y-4">
                     <h2 class="text-sm font-bold tracking-[0.3em] text-ai-cyan uppercase">Verified Expertise</h2>
@@ -619,7 +729,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="px-6 py-16 md:py-24 relative overflow-hidden">
+        <section id="contact" class="px-6 py-16 md:py-24 relative overflow-hidden pl-[15px]">
             <div class="max-w-7xl mx-auto">
                 <div class="glassmorphism rounded-[3rem] p-6 md:p-12 border-ai-cyan/10 overflow-hidden relative">
                     <div class="absolute top-0 right-0 w-48 h-48 bg-transparent blur-0 -z-10"></div>
@@ -858,6 +968,35 @@
             el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
             observer.observe(el);
         });
+
+        // Section Navigation Active State
+        const sectionNavButtons = document.querySelectorAll('.section-nav-btn');
+        const mobileNavButtons = document.querySelectorAll('.mobile-nav-btn');
+        const allNavButtons = [...sectionNavButtons, ...mobileNavButtons];
+        const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'certificates', 'contact'];
+
+        function updateActiveSection() {
+            let current = '';
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        current = sectionId;
+                    }
+                }
+            });
+
+            allNavButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.section === current) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+        updateActiveSection();
 
         // Persistent Floating Tech Stack Logic
         const techStack = [
