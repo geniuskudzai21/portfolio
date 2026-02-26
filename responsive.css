@@ -1,20 +1,54 @@
 
 @media (max-width: 480px) {
-h1{
-    font-size: 30px;
-}
-#certificates{
-    padding: 0;
-    height: auto;
-}
+    h1{
+        font-size: 30px;
+    }
+    #certificates{
+        padding: 0;
+        height: auto;
+    }
 
-.back-text p{
-    font-size: 12px;
-}
+    .back-text p{
+        font-size: 12px;
+    }
 
-.about-text p {
-    text-align: justify;
-}
+    .about-text p {
+        text-align: justify;
+    }
+
+    /* Contact Form Responsive Styles */
+    #contact {
+        padding: 40px 10px !important;
+    }
+
+    #contact .glassmorphism {
+        padding: 20px !important;
+        border-radius: 20px !important;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 12px !important;
+    }
+
+    #contact-form button {
+        padding: 14px !important;
+        font-size: 12px !important;
+    }
+
+    #contact h3 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+
+    #contact .grid {
+        gap: 20px !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -24,6 +58,23 @@ h1{
     }
     .flip-card {
       width: 100%;
+    }
+
+    /* Contact Form Tablet Styles */
+    #contact {
+        padding: 60px 20px !important;
+    }
+
+    #contact .glassmorphism {
+        padding: 30px !important;
+    }
+
+    #contact h3 {
+        font-size: 36px !important;
+    }
+
+    #contact .grid {
+        gap: 30px !important;
     }
 }
 
