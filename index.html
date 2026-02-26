@@ -18,7 +18,6 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        import { inject } from "@vercel/analytics"
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -833,6 +832,7 @@
     <div id="neural-container" class="fixed inset-0 pointer-events-none -z-5 overflow-hidden"></div>
 
     <script>
+        import { inject } from "@vercel/analytics";
         // Initialize Lucide Icons
         lucide.createIcons();
 
